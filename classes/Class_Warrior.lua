@@ -280,6 +280,29 @@ useHeroicStrike = true, dumpRage = 50, wwExcess = 55,
         useCharge = false, useRend = false,
         usePummel = false, useShieldBash = true,
     },
+    -- Arms talents with the tanking layer switched on, for tanking the
+    -- leveling dungeon while staying in the Arms build. Differs from `arms`
+    -- in five places: Sunder, Thunderclap, Shield Block and Charge are on
+    -- (the four threat/mitigation tools `arms` ships off), Shield Slam is
+    -- on, home stance is Defensive for the passive threat multiplier, and
+    -- auto-AoE rotates a deliberate multi-pull by itself. Execute and the
+    -- burst cooldowns stay off - both want a damage stance, so on a tank
+    -- they would spend a stance change for very little threat.
+    armstank = {
+        useMortalStrike = true, useBloodthirst = false, useShieldSlam = true,
+        useWhirlwind = true, useSlam = false,
+        useOverpower = true, useRevenge = false, useExecute = false,
+        stanceDance = true, homeStance = "defensive",
+        useSunder = true, sunderStacks = 5, useThunderClap = true,
+        aoeMode = false, useSweeping = true, useCleave = true,
+        aoeAuto = true, aoeThreshold = 3, aoeCc = true,
+        useHeroicStrike = true, dumpRage = 50, wwExcess = 55,
+        popCDs = false, autoCDElite = false,
+        useDeathWish = false, useRecklessness = false, useBerserkerRage = false,
+        useBloodrage = true, bloodrageRage = 30, useShieldBlock = true,
+        useCharge = true, useRend = false,
+        usePummel = true, useShieldBash = true,
+    },
 }
 
 -- Fills any missing field with a default. No old-format migration yet,
